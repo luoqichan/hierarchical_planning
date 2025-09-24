@@ -36,7 +36,11 @@ class HybridPlanner(BasePlanner):
         self.grid_size = grid_size
         self.agent = self._init_agent()
 
+
     def _init_agent(self):
+        """
+        Initialise agent
+        """
 
         # create agent that can call tools
         agent = initialize_agent(

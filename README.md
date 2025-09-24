@@ -20,9 +20,6 @@ For detailed installation instructions, refer to the [uv documentation](https://
 Quick install options:
 
 ```bash
-# Using pip (requires Python 3.8+)
-pip install uv
-
 # Using installer (Unix/macOS/Linux)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -34,7 +31,7 @@ For Windows and other platforms, see the documentation link above.
 
 After installing uv:
 
-    git clone https://github.com/yhchong/hierarchical_planning.git
+    git clone https://github.com/fausticsun/hierarchical_planning.git
     cd hierarchical_planning
     uv sync
 

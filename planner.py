@@ -2,7 +2,7 @@ import os
 
 from langchain_prompty import create_chat_prompt
 
-from models import local_llm as model
+from models import claude_llm as model
 from schemas import Plan
 
 model_with_structure = model.with_structured_output(Plan)

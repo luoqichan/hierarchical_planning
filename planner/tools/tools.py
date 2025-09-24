@@ -3,12 +3,14 @@ from langchain.tools import tool
 @tool
 def partition_grid(grid_length: int, num_agents: int):
     """Split grid into subregions for each agent."""
+    print(f"USING TOOL PARTITION_GRID")
     step = grid_length // num_agents
     regions = []
     for i in range(num_agents):
         x1, y1 = 1, i*step+1
         x2, y2 = grid_length, (i+1)*step if i < num_agents-1 else grid_length
         regions.append({"region": (x1,y1,x2,y2)})
+        
     return regions
 
 @tool

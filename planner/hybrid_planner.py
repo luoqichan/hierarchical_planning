@@ -36,14 +36,14 @@ class HybridPlanner(BasePlanner):
         self.grid_size = grid_size
         self.agent = self._init_agent()
 
-    def _init_agent(self): 
-        tools = [partition_grid, find_path, validate_plan]
+    def _init_agent(self):
 
         # create agent that can call tools
         agent = initialize_agent(
             tools=tools,
             llm=self.llm,
             agent=AgentType.OPENAI_FUNCTIONS,  
+            verbose=True,
         )
         return agent
 

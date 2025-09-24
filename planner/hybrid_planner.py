@@ -56,7 +56,7 @@ class HybridPlanner(BasePlanner):
         prompt = create_chat_prompt(os.getcwd() + "/prompts/initial_planner.prompty")
         initial_planner = prompt | model_with_structure
         
-        initial_plan = initial_planner.invoke(
+        initial = initial_planner.invoke(
             {
                 "grid_length": self.grid_size,
                 "num_agents": self.number_of_agents,
@@ -65,7 +65,7 @@ class HybridPlanner(BasePlanner):
             }
         )
 
-        raw_output = self.agent.invoke(initial_plan)
+        raw_output = self.agent.invoke(initial)
         plan = raw_output['input']
 
         return plan.agents
